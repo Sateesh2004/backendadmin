@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 export const fetchNotesFromUserBackend = async (req: Request, res: Response):Promise<any> => {
   try {
       
-      const response = await fetch(`${process.env.BACKENDUSER_URL}/notes/notesbyadmin`);
+      const response = await fetch(`${process.env.BACKENDUSER_URL}/notes/notesreqbyadmin`);
       if(response.ok){
         const data = await response.json(); // Parse the response as JSON
         console.log("Request went");
